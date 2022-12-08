@@ -8,7 +8,13 @@
 		Welcome to your todo list
 	</h2>
 </div>
-<form class="mt-8 space-y-6" on:submit={add}>
+<form
+	class="mt-8 space-y-6"
+	on:submit={(e) => {
+		e.preventDefault();
+		add();
+	}}
+>
 	<input type="hidden" name="remember" value="true" />
 	<div class="-space-y-px rounded-md shadow-sm">
 		<div>
